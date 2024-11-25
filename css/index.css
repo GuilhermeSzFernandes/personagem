@@ -1,58 +1,103 @@
-#logo{
+#logo {
     height: 70px;
+    max-width: 100%;
 }
+
 .card {
-    width: 350px; /* Altere o valor para o tamanho que desejar */
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
 }
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon, .carousel-control-next-icon {
     filter: invert(100%);
 }
 
-.carousel-control-next-icon{
-    filter: invert(100%);
-}
-
-.prin{
+.prin {
     text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
 .character {
     display: flex;
+    flex-direction: column;
     padding-top: 50px;
+    align-items: center;
+    text-align: center;
 }
-  
-.character h1 {
-    margin-left: 200px;
+
+.character h1, .character h4 {
+    margin: 10px;
 }
-  
-.character h4 {
-    margin-left: 200px;
+
+#char_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 20px;
 }
 
-#char_txt{
-    display: flex;
-    flex-direction: column;
-}
-  
-.container-ch{
-    padding-left: 50PX;
-    padding-bottom: 50px;
+.container-ch {
+    padding: 20px;
 }
 
-.logo{
+.logo {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     padding-top: 120px;
+    text-align: left;
+    gap: 20px;
 }
 
-.logo img{
-    width: 400px;
+.logo img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0;
 }
 
-.txtlogo{
-    margin-top: 20px;
-    width: 500px;
-    margin-right: 250px;
+.txtlogo {
+    max-width: 600px;
+    font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .character h1, .character h4 {
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    .logo img {
+        width: 70%;
+    }
+
+    .txtlogo {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .prin {
+        font-size: 1.5rem;
+    }
+
+    .txtlogo {
+        width: 100%;
+    }
+
+    .carousel-item .col-4 {
+        width: 100%;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
